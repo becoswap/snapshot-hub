@@ -8,10 +8,13 @@ const router = express.Router();
 
 const fileSize = 1000 * 1000;
 const upload = multer({ dest: 'uploads/', limits: { fileSize } });
-const pinata = pinataSDK(
-  process.env.PINATA_API_KEY,
-  process.env.PINATA_SECRET_API_KEY
-);
+
+const pinataConfig: any = {
+  key: process.env.PINATA_API_KEY,
+  secret: process.env.PINATA_SECRET_API_KEY
+};
+
+const pinata = pinataSDK(pinataConfig.key, pinataConfig.secret);
 
 router.post('/upload', upload.single('file'), async (req, res) => {
   const path = `${req.file.destination}${req.file.filename}`;
