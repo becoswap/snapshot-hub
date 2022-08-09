@@ -1,18 +1,10 @@
-# Node version matching the version declared in the package.json 
-FROM node:14.0-slim
+FROM node:16
+ENV NODE_ENV=production
 
-# Update O.S.
-RUN apt-get update && apt-get upgrade -y 
+WORKDIR /app
 
-# Install required O.S. packages
-RUN apt-get install -y git python make g++
+COPY package*.json ./
 
-# Create the application workdir
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-WORKDIR /home/node/app
-
-# Set current user
-USER node
 
 # Copy app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -22,7 +14,7 @@ COPY package*.json ./
 RUN npm install
 
 # Bundle app source
-COPY --chown=node:node . .
+COPY . .
 
 # Set the container port 
 EXPOSE 8080

@@ -9,7 +9,7 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "@ensdomains/ensjs": "^2.0.1",
+    "@ensdomains/ensjs": "^3.0.0-alpha.10",
     "@ethersproject/abi": "^5.4.0",
     "@ethersproject/address": "^5.4.0",
     "@ethersproject/constants": "^5.4.0",
@@ -38,9 +38,8 @@
     "graphql": "^15.5.1",
     "graphql-fields": "^2.0.3",
     "graphql-query-count-limit": "^1.0.0",
-    "graphql-tools": "^7.0.5",
-    "ipfs-cluster-api": "^0.0.9",
-    "ipfs-http-client": "^57.0.3",
+    "graphql-tools": "^8.3.1",
+    "ipfs-http-client": "^55.0.0",
     "lodash": "^4.17.20",
     "multer": "^1.4.3",
     "mysql": "^2.18.1",
