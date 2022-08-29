@@ -878,8 +878,9 @@
   "resolved" "https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz"
   "version" "4.6.0"
 
-"@snapshot-labs/snapshot.js@github:becoswap/snapshot.js#master":
-  "resolved" "git+ssh://git@github.com/becoswap/snapshot.js.git#3984523627655eb2d116ce72f8d5eb4a3a767474"
+"@snapshot-labs/snapshot.js@github:becoswap/snapshot.js#b5b335765a0594ad4ab22062681aa0c748e9ba7b":
+  "integrity" "sha512-Vz1CsUO/5LcnbIAymH9gSM/cztnPekreussq4eSC9Es5B+v6bFtkjVj7WtYIeoiSBm7v58LtI9uyhdhHht9o5g=="
+  "resolved" "git+ssh://git@github.com/becoswap/snapshot.js.git#b5b335765a0594ad4ab22062681aa0c748e9ba7b"
   "version" "0.2.0"
   dependencies:
     "@ethersproject/abi" "^5.0.4"
